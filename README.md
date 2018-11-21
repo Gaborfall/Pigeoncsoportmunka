@@ -1,1 +1,1 @@
-mindenki töltse fel amit megbeszéltünk :D
+Ha valami hiányzik 11-ig azt feltöltöm szívesen

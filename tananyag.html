@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tananyag</title> 
+</head>
+
+<body>
+<table style="width:100%">
+    <tr>
+        <td>
+            <h2><a href="index.html">Főoldal</a> </h2>
+        </td>
+        <td>
+            <h2><a href="csapat.html">Csapat</a></h2>
+        </td>
+        <td>
+            <h2>Tananyag</h2>
+        </td>
+        <td>
+            <h2><a href="kapcsolat.html">Kapcsolatok</a></h2>
+        </td>
+        <td>
+            <h2><a href="feladatok.html">Feladatok</a></h2>
+        </td>
+    </tr>
+</table>
+<h3>Ákos feladata:</h3>
+<h2>Javascript-számok világa</h2>
+<h3>Sokéves átlagtól való eltérés</h3>
+
+<p>
+    Egészítsed ki az időjárás-jelentés oldalt a sokéves átlagtól való hőmérséklet eltérés megjelenítésével. <br>Egy
+    változóban tárold a budapesti sokéves átlaghőmérsékletet. <br>Egy változóba számold ki a mai hőmérsékletnek az attól
+    való eltérését. Jelenítsed meg az értékeket az oldalon.
+</p>
+<p>
+    Vegyünk fel pár változót a "var" paranccsal. Az értékük a feladat szempontjából lényegtelen. <br>
+pl: atlag2 = 11 + 9 + 9 - 4 - 6 - 10 / 6; <br>
+    atlag3 = 15;
+</p>
+<p>
+    két érték, ezesetben a két változó átlaga: <br>
+atlag = (atlag2 + atlag3) / 2;
+</p>
+<p>
+    kerekítsük egész számra, hogy átláthatóbb legyen <br>
+"document.querySelector('a span-ban megadott "id"értéke').innerHTML = Math.round(atlag4);"
+</p>
+<p> 
+    beillesztés a html fájlba: <br>
+Átlaghőmérséklet: span id="tetszőlegesen megadható"> /span> <br>
+(&#8451 ;: a celsius fok jelének kódja ";" előtti space nélkül.)
+</p>
+<p>
+< script src="/beillesztenő js fájl neve.js">< /script> <br>
+természetesen ahhoz, hogy a parancs működjön a space-k a "<" jelek után hanyagolandók.
+</p>
+<p>
+    ha a js fájl helyét és az id-t helyesn adtuk meg, akkor működik is.
+
+</p>
+
+
+<h3>Móni feladata:</h3> 
+<p>Nekem a kamatos kamat 3 változóval való kiszámítása okozott gondot.<br>
+    Először rosszul zárójeleztem, vagyis 1 zárójelet feleslegesen raktam be, <br>
+    és ez azt jelentette, hogy egy óriási szám lett a végeredmény az eredetihez képest.<br>
+Ez annak volt  köszönhető, hogy az alap összeget is hatványalapnak vettem.</p> 
+    <h4>A rossz képlet:</h4>
+    <p>végösszeg=(s*(1+p/100))<sup>f </sup> <br>
+    ahol p a kamat, f a futamidő évben és s az összeg</p>
+   <p> var megoldas = (osszeg_num * (1 + kamat_num / 100) ** futam_num;</p>
+  
+   <h4>A képlet helyesen:</h4>
+   <p> végösszeg=s*(1+p/100)<sup>f </sup></p>
+   <p> var megoldas = osszeg_num * (1 + kamat_num / 100) ** futam_num;</p>
+   <div style="width:50%">
+    <tr><td>
+   <h3>Danié feladata:</h3>
+        <p>Készíts egy űrlapot, melynek segítségével üzenetet tudsz küldneni egy adott 
+        email címre, úgy hogy a tárgy mezőbe írt szöveg kerüljön a tárgyba, az 
+        "üzenet szövege" mezőbe írt pedig az üzenet törzsbe!</p>
+    <p>1. Hozz létre egy form tag-et melyhez hozzárendelsz egy eseményt a form
+         után írt action-paranccsal. Az esemény jelen esetben az email küldése 
+         lesz, melyet az action= után írt mailto:emailcím[amire szeretnéd, hogy 
+         az emailt küldjék] parancsal tudsz megadni. Az action az az esemény ami
+          a submit input mezőre kattintáskor fog történni.</p>
+    <p>2. Ezek után hozd létre a input mezőket és az input mezőkhöz tartozó címkéket
+         az input és a label tag-ekkel. Fontos, hogy minden input elementnek állíts
+          be egy ID-t, és minden label elementnek legyen megadva egy for, melyhez 
+          az input element ID-jét rendeld, a következő módon: for="az ehhez tartozó 
+          input mező ID-je".</p>
+    <p>3. A submit gomb létrehozásához az input type legyen submit. Opcionálisan
+         megadhatod a többi input element típusát is, aszerint, hogy milyen jellegű
+          információ kerülhessen bele, bár a mi esetünkben ez nem fontos, mert mindkét 
+          input mezőbe szöveget várunk. Az üzenet szövege mezőnél érdemes az input tag-et
+           textarea tag-re változtatni, mert ez alakalmasabb arra, hogy hosszabb üzenetet
+            szerkesszünk, egyrészt sima input mezőben nem lehet új sort nyitni, másrészt
+             a textarea mező méretét a felhasználó tetszőlegesen állíthatja üzenete hosszától függően.</p>
+    <p>4. Már csak az hiányzik, hogy a tárgy-input box-ba írt szöveg az email küldésénél
+         az email kezelőben a tárgy, az üzenet szövege-input boxba írt szöveg pedig a 
+         szövegtörzsbe kerüljön. Ehhez annyit kell tennünk, hogy a tárgy elementhez a 
+         "subject", az üzenet szövege elementhez pedig a "body" name-et adjuk meg.</p>
+        </td> </tr>
+</table>
+         <h3>Gábor problémái:</h3>
+        
+<h4>Egy egyszerű feladat:</h4>
+Rengeteg idő mehet el egy egyszerű feladattal is ha nem figyelünk oda rendesen.<br>
+Négy darab változó létrehozása az első változó :  neve = active;
+    értéke = true<br>
+   <b> var active = true;</b><br>
+     és már itt fejfájást okozhat ha elhagyjuk pontosvesszőt(;) a sor végéről.
+        <p>Második változó : neve = hourly;
+        értéke= 4 :<br>
+         <b>var hourly = 4;></b><br>
+            Az hourly-t sikeresen elírtam bár az csak a saját hibám volt, veletek ugysem fordul elő.</p>
+           
+            Harmadik változó : neve = spent,
+            értéke = egy logikai kifejezés, igaz ha active true, és horly értéke nagyobb mint 2 :<br>
+            <b>var spent = true == (active = true) && (hourly > 2);</b><br>A zárójelek és az
+            egyenlőségjelek helyes használata volt itt a főbb buktató bár ezek a parancsok már nem voltak ismeretlenek számomra.
+            <p>A negyedik változó : neve = type; értéke = a spent változó típusa.<br>
+                <b>var type = typeof spent;</b><br>
+                Ez már megoldható volt egy typeof lekéréssel.
+                <p>Továbbá két hasznos link ami segíthet: <a href="https://www.w3schools.com/html/">https://www.w3schools.com/html</a>;
+                    <a href="https://html-css-js.com/html/">https://html-css-js.com/html/</a>
+<p>
+</body>
+
+</html>

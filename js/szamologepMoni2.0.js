@@ -122,10 +122,29 @@ function hatvanym() {
 }
 
 function torlesm() {
-  document.querySelector('#num1m').value += '';
-  document.querySelector('#num2m').value += '';
+  document.querySelector('#num1m').value = '';
+  document.querySelector('#num2m').value = '';
+  document.querySelector('#labelm').innerHTML = 'művelet';
+  document.querySelector('#label2m').innerHTML = 'eredmény';
 }
 
 function megoldasm() {
+  var numberOne = document.querySelector('#num1m').value;
+  var numberTwo = document.querySelector('#num2m').value;
 
+  switch (muveletm) {
+  case 1: document.querySelector('#label2m').innerHTML = parseFloat(numberOne + numberTwo);
+    break;
+  case 2: document.querySelector('#label2m').innerHTML = parseFloat(numberOne - numberTwo);
+    break;
+  case 3: document.querySelector('#label2m').innerHTML = parseFloat(numberOne * numberTwo);
+    break;
+  case 4: document.querySelector('#label2m').innerHTML = parseFloat(numberOne / numberTwo);
+    break;
+  case 5: document.querySelector('#label2m').innerHTML = parseFloat(numberOne ** numberTwo);
+    break;
+  default:document.querySelector('#label2m').innerHTML = ' ';
+  }
 }
+
+

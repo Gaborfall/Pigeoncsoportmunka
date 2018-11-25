@@ -35,6 +35,15 @@ p { color:white;
 }
 
 
-h1, h2, h3, h4 { color:white;
+h1, h2, h3, h4{ color:white;
 
+}
+
+form {border:white solid 20px;
+      
+}
+
+table.form {
+background-color:white;
+width:50%;
 }

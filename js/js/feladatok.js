@@ -93,7 +93,7 @@ function plusz() {
 }
 
 function tizpont() {
-  document.querySelector('#eredmeny').innerHTML = (document.querySelector('#eredmeny').innerHTML + '.');  
+  document.querySelector('#eredmeny').innerHTML = (document.querySelector('#eredmeny').innerHTML + '.');
   tizedes = true;
 }
 
@@ -146,25 +146,25 @@ function megoldas() {
   var numberTwo = szelet2();
   var numberThree = szelet3();
   var numberFour = szelet4();
-    switch (muvelet) {
-      case 1: document.querySelector('#eredmeny2').innerHTML =parseFloat(numberOne+numberTwo);
-        break;
-      case 2: document.querySelector('#eredmeny2').innerHTML =parseFloat(numberOne-numberTwo);
-        break;
-      case 3: document.querySelector('#eredmeny2').innerHTML =parseFloat(numberOne*numberTwo);
-        break;
-      case 4: document.querySelector('#eredmeny2').innerHTML =parseFloat(numberOne/numberTwo);
-        break;
-      case 5: document.querySelector('#eredmeny2').innerHTML =parseFloat(numberOne**numberTwo);
-        break;
-      case 6: document.querySelector('#eredmeny2').innerHTML =parseFloat(Math.sin(numberThree*Math.PI/180));
-        break;
-      case 7: document.querySelector('#eredmeny2').innerHTML =parseFloat(Math.cos(numberThree*Math.PI/180));
-        break;
-      case 8: document.querySelector('#eredmeny2').innerHTML =parseFloat(Math.tan(numberFour));
-        break;
-      case 9: document.querySelector('#eredmeny2').innerHTML =parseFloat(Math.log(numberFour));
-    }
+  switch (muvelet) {
+  case 1: document.querySelector('#eredmeny2').innerHTML = parseFloat(numberOne + numberTwo);
+    break;
+  case 2: document.querySelector('#eredmeny2').innerHTML = parseFloat(numberOne - numberTwo);
+    break;
+  case 3: document.querySelector('#eredmeny2').innerHTML = parseFloat(numberOne * numberTwo);
+    break;
+  case 4: document.querySelector('#eredmeny2').innerHTML = parseFloat(numberOne / numberTwo);
+    break;
+  case 5: document.querySelector('#eredmeny2').innerHTML = parseFloat(numberOne ** numberTwo);
+    break;
+  case 6: document.querySelector('#eredmeny2').innerHTML = parseFloat(Math.sin(numberThree * Math.PI / 180));
+    break;
+  case 7: document.querySelector('#eredmeny2').innerHTML = parseFloat(Math.cos(numberThree * Math.PI / 180));
+    break;
+  case 8: document.querySelector('#eredmeny2').innerHTML = parseFloat(Math.tan(numberFour));
+    break;
+  case 9: document.querySelector('#eredmeny2').innerHTML = parseFloat(Math.log(numberFour));
+  }
 }
 
 function akosCalculator() {
@@ -175,7 +175,21 @@ function akosCalculator() {
   var parseNumber2a = parseInt(number2a.value, 10);
   var resulta = eval(parseNumber1a + operationa + parseNumber2a);
   document.getElementById('resulta').innerHTML = resulta;
+
+  function event1(x) {
+    document.getElementById('text1').value += x;
+  }
+
+  function event2() {
+    var x = document.getElementById('text1').value;
+    document.getElementById('text1').value = eval(x);
+  }
+
+  function event3() {
+    document.getElementById('text1').value = '';
+  }
 }
+
 
 function daniCalculator() {
   var number1d = document.getElementById('number1d');
@@ -186,18 +200,16 @@ function daniCalculator() {
   var resultd = eval(parseNumber1d + operationd + parseNumber2d);
   document.getElementById('resultd').innerHTML = resultd;
 }
-//Gabor
-function pluszg () {
-  document.szamologep.eredmeny.value = document.szamologep.elsorublika.value * 1 + document.szamologep.masodikrublika.value * 1 ;
-  }
-  function minuszg () {
-  document.szamologep.eredmeny.value = document.szamologep.elsorublika.value - document.szamologep.masodikrublika.value;
-  }
-  function szorg () {
-  document.szamologep.eredmeny.value = document.szamologep.elsorublika.value * document.szamologep.masodikrublika.value;
-  }
-  function osztg () {
-document.szamologep.eredmeny.value = document.szamologep.elsorublika.value / document.szamologep.masodikrublika.value;
+// Gabor
+function pluszg() {
+  document.szamologep.eredmeny.value = document.szamologep.elsorublika.value * 1 + document.szamologep.masodikrublika.value * 1;
 }
-
-
+function minuszg() {
+  document.szamologep.eredmeny.value = document.szamologep.elsorublika.value - document.szamologep.masodikrublika.value;
+}
+function szorg() {
+  document.szamologep.eredmeny.value = document.szamologep.elsorublika.value * document.szamologep.masodikrublika.value;
+}
+function osztg() {
+  document.szamologep.eredmeny.value = document.szamologep.elsorublika.value / document.szamologep.masodikrublika.value;
+}

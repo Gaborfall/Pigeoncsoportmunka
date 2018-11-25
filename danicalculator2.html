@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+
+<body>
+    <br>
+    <input id="number1" onclick="number1Input()" placeholder="első szám" style="width:93px">
+    <input id="operation" value="+" readonly style="text-align:center;width:22px">
+    <input id="number2" onclick="number2Input()" placeholder="második szám" style="width:93px"> <br><br>
+    <input id="result" placeholder="eredmény" readonly style="width:224px"><br><br>
+
+    <button id="1" onclick="one()" class="first-numbers" value="1" style="width:54px">1</button>
+    <button id="2" onclick="two()" class="first-numbers" value="2" style="width:54px">2</button>
+    <button id="3" onclick="three()" class="first-numbers" value="3" style="width:54px">3</button>
+        
+        <button id="s1" onclick="sone()" class="second-numbers" value="1" style="display:none;width:54px">1</button>
+        <button id="s2" onclick="stwo()" class="second-numbers" value="2" style="display:none;width:54px">2</button>
+        <button id="s3" onclick="sthree()" class="second-numbers" value="3" style="display:none;width:54px">3</button>
+
+    <button id="plus" onclick="fPlus(); number2Input()" value="+" style="width:54px">+</button><br><br>
+
+    <button id="4" onclick="four()" class="first-numbers" value="4" style="width:54px">4</button>
+    <button id="5" onclick="five()" class="first-numbers" value="5" style="width:54px">5</button>
+    <button id="6" onclick="six()" class="first-numbers" value="6" style="width:54px">6</button>
+
+        <button id="s4" onclick="sfour()" class="second-numbers" value="4" style="display:none;width:54px">4</button>
+        <button id="s5" onclick="sfive()" class="second-numbers" value="5" style="display:none;width:54px">5</button>
+        <button id="s6" onclick="ssix()" class="second-numbers" value="6" style="display:none;width:54px">6</button>
+
+    <button id="minus" onclick="fMinus(); number2Input()" value="-" style="width:54px">-</button><br><br>
+
+    <button id="7" onclick="seven()" class="first-numbers" value="7" style="width:54px">7</button>
+    <button id="8" onclick="eight()" class="first-numbers" value="8" style="width:54px">8</button>
+    <button id="9" onclick="nine()" class="first-numbers" value="9" style="width:54px">9</button>
+        
+        <button id="s7" onclick="sseven()" class="second-numbers" value="7" style="display:none;width:54px">7</button>
+        <button id="s8" onclick="seight()" class="second-numbers" value="8" style="display:none;width:54px">8</button>
+        <button id="s9" onclick="snine()" class="second-numbers" value="9" style="display:none;width:54px">9</button>
+
+    <button id="mult" onclick="fMult(); number2Input()" value="*" style="width:54px">*</button><br><br>
+    <button id="clear" onclick="fClear(); number1Input()" value="C" style="width:54px">C</button>
+
+    <button id="0" onclick="zero()" class="first-numbers" value="0" style="width:54px">0</button>
+        
+        <button id="s0" onclick="szero()" class="second-numbers" value="0" style="display:none;width:54px">0</button>
+
+    <button id="dot" class="first-numbers" onclick="fDot()" value="." style="width:54px"><b>.</b></button>
+
+        <button id="sdot" class="second-numbers" onclick="fsDot()" value="." style="display:none;width:54px">.</button>
+
+    <button id="div" onclick="fDiv(); number2Input()" value="/" style="width:54px">/</button><br><br>
+    <button id="exp" onclick="fExp(); number2Input()" value="**" style="width:54px">**</button>
+    <button id="rem" onclick="fRem(); number2Input()" value="%" style="width:54px">%</button>
+    <button id="eq" onclick="fEq(); number1Input()" value="=" style="width:112px">=</button>
+
+<script src="/js/danicalculator2.js"></script>
+</body>
+
+</html>

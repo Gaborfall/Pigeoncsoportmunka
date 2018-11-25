@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	
+</head>
+
+<body>
+	<input type="textbox" id="num1" name="num1" onfocus="textboxPos(1)" />
+	<select id="operations" onchange="">
+	  <option value="f1">+</option>
+	  <option value="f2">-</option>
+	  <option value="f3">*</option>
+	  <option value="f4">/</option>
+	  <option value="f5">%</option>
+	  <option value="f6">**</option>		
+	</select>
+	
+	<input type="textbox" id="num2" name="num2" onfocus="textboxPos(2)" />
+	
+	
+	
+	
+	<br />
+	<button style="height:35px;width:70px" type="button" onclick="numberFill(1)">1</button>
+	<button style="height:35px;width:70px" type="button" onclick="numberFill(2)">2</button>
+	<button style="height:35px;width:70px" type="button" onclick="numberFill(3)">3</button>
+	<br />
+	<button style="height:35px;width:70px" type="button" onclick="numberFill(4)">4</button>
+	<button style="height:35px;width:70px" type="button" onclick="numberFill(5)">5</button>
+	<button style="height:35px;width:70px" type="button" onclick="numberFill(6)">6</button>
+	<br />
+	<button style="height:35px;width:70px" type="button" onclick="numberFill(7)">7</button>
+	<button style="height:35px;width:70px" type="button" onclick="numberFill(8)">8</button>
+	<button style="height:35px;width:70px" type="button" onclick="numberFill(9)">9</button>
+	<br />
+	<button style="height:35px;width:70px" type="button" onclick="numberFill(0)">0</button>
+	<button style="height:35px;width:70px" type="button" onclick="numberFill('.')">.</button>
+	<button style="height:35px;width:70px" type="button" onclick="calculate()">=</button>
+     <br />
+	<input type="textbox" id="num3" />
+	
+	<script src="/js/js/gaborszamologep3.0.js">
+		
+	</script>
+</body>
+</html>

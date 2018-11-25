@@ -6,130 +6,340 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Számológép</title>
+<style>
+    #text1,
+    #text2 {}
+
+    button {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
 </head>
 
 <body>
-<table style="width:100%">
-    <tr>
-        <td>
-            <h2><a href="index.html">Főoldal</a> </h2>
-        </td>
-        <td>
-<h2><a href="csapat.html">Csapat</a></h2>
-        </td>
-        <td>
-<h2><a href="tananyag.html">Tananyag</a></h2>
-        </td>
-        <td>
-<h2><a href="kapcsolat.html">Kapcsolat</a></h2>
-        </td>
-        <td>
-            <h2>Feladatok</h2>
-        </td>
-    </tr>
-</table>
-    <h1>Feladatok</h1>
+    <table style="width:100%">
+        <tr>
+            <td>
+                <h2><a href="index.html">Főoldal</a> </h2>
+            </td>
+            <td>
+                <h2><a href="csapat.html">Csapat</a></h2>
+            </td>
+            <td>
+                <h2><a href="tananyag.html">Tananyag</a></h2>
+            </td>
+            <td>
+                <h2><a href="kapcsolat.html">Kapcsolat</a></h2>
+            </td>
+            <td>
+                <h2>Feladatok</h2>
+            </td>
+        </tr>
+    </table>
+    <table>
     
-<table ><tr><td>  <h1>Dani számológépe</h1>
-<div>
-<form>
-    <label for="number1d">Első szám: <input name="number1d" id="number1d" />&nbsp; &nbsp; &nbsp; &nbsp;</label>
-    <label for="operationd">Művelet: </label>
-    <select name="operationd" id="operationd">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-    </select>
-    <label for="number2d">&nbsp; &nbsp; &nbsp; &nbsp;Második szám: <input name="number2d" id="number2d" /> </label> <br>
+    <table>
+        <tr>
+          
+            <td>  
+                <h1>Dani számológépe</h1>
+        <div>
+            <form>
+                <label for="number1d">Első szám: <input name="number1d" id="number1d" />&nbsp; &nbsp; &nbsp; &nbsp;</label>
+                <label for="operationd">Művelet: </label>
+                <select name="operationd" id="operationd">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <label for="number2d">&nbsp; &nbsp; &nbsp; &nbsp;Második szám: <input name="number2d" id="number2d" /> </label> <br>
     <br>
       <!--<label for="resultd">-->
-        Eredmény: <span id="resultd"></span> 
+                Eredmény: <span id="resultd"></span> 
      <!-- </label>-->
     <br> <br>
-    <input type="button" onclick="daniCalculator()" value="Számolj" />
-</form>
+                <input type="button" onclick="daniCalculator()" value="Számolj" />
+            </form>
 
-</div></td><td> 
-<h1>Ákos calculator</h1>
+        </div>
+            </td>
+<td>
+    <input id="number1" onclick="number1Input()" placeholder="első szám" style="width:93px">
+    <input id="operation" value="+" readonly style="text-align:center;width:22px">
+    <input id="number2" onclick="number2Input()" placeholder="második szám" style="width:93px"> <br><br>
+    <input id="result" placeholder="eredmény" readonly style="width:224px"><br><br>
 
-<form>
-    <label for="number1a">First number: <input name="number1a" id="number1a"> </label>
-    <label for="operationa">Operation: </label>
-    <select name="operationa" id="operationa">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-    </select>
-    <label for="number2a">Second number: <input name="number2a" id="number2a" /> </label>
+    <button id="1" onclick="one()" class="first-numbers" value="1" style="width:54px">1</button>
+    <button id="2" onclick="two()" class="first-numbers" value="2" style="width:54px">2</button>
+    <button id="3" onclick="three()" class="first-numbers" value="3" style="width:54px">3</button>
+
+    <button id="s1" onclick="sone()" class="second-numbers" value="1" style="display:none;width:54px">1</button>
+    <button id="s2" onclick="stwo()" class="second-numbers" value="2" style="display:none;width:54px">2</button>
+    <button id="s3" onclick="sthree()" class="second-numbers" value="3" style="display:none;width:54px">3</button>
+
+    <button id="plus" onclick="fPlus(); number2Input()" value="+" style="width:54px">+</button><br><br>
+
+    <button id="4" onclick="four()" class="first-numbers" value="4" style="width:54px">4</button>
+    <button id="5" onclick="five()" class="first-numbers" value="5" style="width:54px">5</button>
+    <button id="6" onclick="six()" class="first-numbers" value="6" style="width:54px">6</button>
+
+    <button id="s4" onclick="sfour()" class="second-numbers" value="4" style="display:none;width:54px">4</button>
+    <button id="s5" onclick="sfive()" class="second-numbers" value="5" style="display:none;width:54px">5</button>
+    <button id="s6" onclick="ssix()" class="second-numbers" value="6" style="display:none;width:54px">6</button>
+
+    <button id="minus" onclick="fMinus(); number2Input()" value="-" style="width:54px">-</button><br><br>
+
+    <button id="7" onclick="seven()" class="first-numbers" value="7" style="width:54px">7</button>
+    <button id="8" onclick="eight()" class="first-numbers" value="8" style="width:54px">8</button>
+    <button id="9" onclick="nine()" class="first-numbers" value="9" style="width:54px">9</button>
+
+    <button id="s7" onclick="sseven()" class="second-numbers" value="7" style="display:none;width:54px">7</button>
+    <button id="s8" onclick="seight()" class="second-numbers" value="8" style="display:none;width:54px">8</button>
+    <button id="s9" onclick="snine()" class="second-numbers" value="9" style="display:none;width:54px">9</button>
+
+    <button id="mult" onclick="fMult(); number2Input()" value="*" style="width:54px">*</button><br><br>
+    <button id="clear" onclick="fClear(); number1Input()" value="C" style="width:54px">C</button>
+
+    <button id="0" onclick="zero()" class="first-numbers" value="0" style="width:54px">0</button>
+
+    <button id="s0" onclick="szero()" class="second-numbers" value="0" style="display:none;width:54px">0</button>
+
+    <button id="dot" class="first-numbers" onclick="fDot()" value="." style="width:54px"><b>.</b></button>
+
+    <button id="sdot" class="second-numbers" onclick="fsDot()" value="." style="display:none;width:54px">.</button>
+
+    <button id="div" onclick="fDiv(); number2Input()" value="/" style="width:54px">/</button><br><br>
+    <button id="exp" onclick="fExp(); number2Input()" value="**" style="width:54px">**</button>
+    <button id="rem" onclick="fRem(); number2Input()" value="%" style="width:54px">%</button>
+    <button id="eq" onclick="fEq(); number1Input()" value="=" style="width:112px">=</button>
+                <!--Dani2.0-->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h1>Ákos calculator</h1>
+
+            <form>
+                <label for="number1a">First number: <input name="number1a" id="number1a"> </label>
+                <label for="operationa">Operation: </label>
+                <select name="operationa" id="operationa">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <label for="number2a">Second number: <input name="number2a" id="number2a" /> </label>
 <br>
 <br>
     <!--<label for="resulta">-->
-        Value: <span id="resulta"></span>
+                Value: <span id="resulta"></span>
    <!-- </label>-->
 <br>
-    <input type="button" onclick="akosCalculator()" value="Calculate">
-</form>
+                <input type="button" onclick="akosCalculator()" value="Calculate">
+            </form>
+            </td>
+            <td>
+        <div>
+            <script>
+                function event1(x) {
+                    document.getElementById('text1').value += x;
+                }
 
-</td></tr>
-<tr><td>
-<h1>Gábor számológépe</h1>
-<form name="szamologep">
-    <input name="elsorublika" type="number">
-    <input type="button" value=" + " onclick="pluszg()">
-    <input type="button" value=" - " onclick="minuszg()">
-    <input type="button" value=" * " onclick="szorg()">
-    <input type="button" value=" / " onclick="osztg()">
-    <input name="masodikrublika" type="number">
-    <p>
-        Magic: <input readonly name="eredmeny">
-    </p>
-</form>
-</td><td>
+                function event2() {
+                    var x = document.getElementById('text1').value;
+                    document.getElementById('text1').value = eval(x);
+                }
+
+                function event3() {
+                    document.getElementById('text1').value = '';
+                }
+            </script>
+    <table border="1">
+        <tr>
+            <th colspan="4">
+                <h2>Ákos Calculator2.0</h2>
+            </th>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text" id="text1" placeholder="0" style="text-align:right;" /></td>
+
+        </tr>
+        <tr>
+            <td><button type="button" value="8" onclick="event1(this.value)">8</button></td>
+            <td><button type="button" value="9" onclick="event1(this.value)">9</button></td>
+            <td><button type="button" value="*" onclick="event1(this.value)">*</button></td>
+            <td><button type="button" value="-" onclick="event1(this.value)">-</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" value="6" onclick="event1(this.value)">6</button></td>
+            <td><button type="button" value="7" onclick="event1(this.value)">7</button></td>
+            <td><button type="button" value="**" onclick="event1(this.value)">**</button></td>
+            <td rowspan="2"><button type="button" value="+" style="height:50px;" onclick="event1(this.value)">+</td>
+        </tr>
+        <tr>
+            <td><button type="button" value="4" onclick="event1(this.value)">4</button></td>
+            <td><button type="button" value="5" onclick="event1(this.value)">5</button></td>
+            <td><button type="button" value="/" onclick="event1(this.value)">/</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" value="2" onclick="event1(this.value)">2</button></td>
+            <td><button type="button" value="3" onclick="event1(this.value)">3</button></td>
+            <td><button type="button" value="." onclick="event1(this.value)">.</button></td>
+            <td rowspan="2"><button type="button" style="height:48px;" onclick="event2()">=</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" value="0" onclick="event1(this.value)">0</button></td>
+            <td><button type="button" value="1" onclick="event1(this.value)">1</button></td>
+            <td><button type="button" id="clearA" class="clear" onclick="event3(this.value)">C</button></td>
+        </tr>
+    </table>
+        </div>
+</td>
+</tr>
+
+            <tr>
+            <td>
+                    <h1>Gábor számológépe</h1>
+        <form name="szamologep">
+            <input name="elsorublika" type="number">
+            <input type="button" value=" + " onclick="pluszg()">
+            <input type="button" value=" - " onclick="minuszg()">
+            <input type="button" value=" * " onclick="szorg()">
+            <input type="button" value=" / " onclick="osztg()">
+            <input name="masodikrublika" type="number">
+                <p>
+                    Magic: <input readonly name="eredmeny">
+                </p>
+        </form>
+            </td>
+<td><input type="textbox" id="num1" name="num1" onfocus="textboxPos(1)" />
+    <select id="operations" onchange="">
+        <option value="f1">+</option>
+        <option value="f2">-</option>
+        <option value="f3">*</option>
+        <option value="f4">/</option>
+        <option value="f5">%</option>
+        <option value="f6">**</option>
+    </select>
+
+    <input type="textbox" id="num2" name="num2" onfocus="textboxPos(2)" />
 
 
-<h2>Móni tudományos számológépe</h2>
 
-<form>
-<input style="height:20px;width:50px" type="button" value="1" onclick="egy()" >
-<input style="height:20px;width:50px" type="button" value="2" onclick="ket()" >
-<input style="height:20px;width:50px" type="button" value="3" onclick="har()" >
-<input style="height:20px;width:50px" type="button" value="4" onclick="negy()" >
-<input style="height:20px;width:30px" type="button" value="+" onclick="plusz()" >
+
+    <br />
+    <button style="height:35px;width:70px" type="button" onclick="numberFill(1)">1</button>
+    <button style="height:35px;width:70px" type="button" onclick="numberFill(2)">2</button>
+    <button style="height:35px;width:70px" type="button" onclick="numberFill(3)">3</button>
+    <br />
+    <button style="height:35px;width:70px" type="button" onclick="numberFill(4)">4</button>
+    <button style="height:35px;width:70px" type="button" onclick="numberFill(5)">5</button>
+    <button style="height:35px;width:70px" type="button" onclick="numberFill(6)">6</button>
+    <br />
+    <button style="height:35px;width:70px" type="button" onclick="numberFill(7)">7</button>
+    <button style="height:35px;width:70px" type="button" onclick="numberFill(8)">8</button>
+    <button style="height:35px;width:70px" type="button" onclick="numberFill(9)">9</button>
+    <br />
+    <button style="height:35px;width:70px" type="button" onclick="numberFill(0)">0</button>
+    <button style="height:35px;width:70px" type="button" onclick="numberFill('.')">.</button>
+    <button style="height:35px;width:70px" type="button" onclick="calculate()">=</button>
+    <br />
+    <input type="textbox" id="num3" />
+
+    <script src="/js/js/gaborszamologep3.0.js">
+
+    </script>
+    <!--Gábor2.0-->
+</td>
+</tr>
+<tr>
+        <td>
+
+                <h2>Móni tudományos számológépe</h2>
+
+        <form>
+            <input style="height:20px;width:50px" type="button" value="1" onclick="egy()" >
+            <input style="height:20px;width:50px" type="button" value="2" onclick="ket()" >
+            <input style="height:20px;width:50px" type="button" value="3" onclick="har()" >
+            <input style="height:20px;width:50px" type="button" value="4" onclick="negy()" >
+            <input style="height:20px;width:30px" type="button" value="+" onclick="plusz()" >
+        <br>
+            <input style="height:20px;width:50px" type="button" value="5" onclick="ot()" >
+            <input style="height:20px;width:50px" type="button" value="6" onclick="hat()" >
+            <input style="height:20px;width:50px" type="button" value="7" onclick="het()" >
+            <input style="height:20px;width:50px" type="button" value="8" onclick="nyolc()" >
+            <input style="height:20px;width:30px" type="button" value="-" onclick="kivon()" >
 <br>
-<input style="height:20px;width:50px" type="button" value="5" onclick="ot()" >
-<input style="height:20px;width:50px" type="button" value="6" onclick="hat()" >
-<input style="height:20px;width:50px" type="button" value="7" onclick="het()" >
-<input style="height:20px;width:50px" type="button" value="8" onclick="nyolc()" >
-<input style="height:20px;width:30px" type="button" value="-" onclick="kivon()" >
-<br>
-<input style="height:20px;width:50px" type="button" value="9" onclick="kil()" >
-<input style="height:20px;width:50px" type="button" value="0" onclick="nul()" >
+            <input style="height:20px;width:50px" type="button" value="9" onclick="kil()" >
+            <input style="height:20px;width:50px" type="button" value="0" onclick="nul()" >
 
-<input style="height:20px;width:32px" type="button" value="." onclick="tizpont()" >
-<input style="height:20px;width:32px" type="button" value="*" onclick="szor()" >
-<input style="height:20px;width:32px" type="button" value="/" onclick="oszt()" >
-<input style="height:20px;width:30px" type="button" value="^" onclick="hatvany()" >
+            <input style="height:20px;width:32px" type="button" value="." onclick="tizpont()" >
+            <input style="height:20px;width:32px" type="button" value="*" onclick="szor()" >
+            <input style="height:20px;width:32px" type="button" value="/" onclick="oszt()" >
+            <input style="height:20px;width:30px" type="button" value="^" onclick="hatvany()" >
 <br>
 
 
-<input style="height:20px;width:50px" type="button" value="=" onclick="megoldas()" >
+            <input style="height:20px;width:50px" type="button" value="=" onclick="megoldas()" >
 
-<input style="height:20px;width:50px" type="button" value="C" onclick="torles()" >
+            <input style="height:20px;width:50px" type="button" value="C" onclick="torles()" >
 
-<input style="height:20px;width:32px" type="button" value="sin" onclick="szin()" >
-<input style="height:20px;width:32px" type="button" value="cos" onclick="kosz()" >
-<input style="height:20px;width:32px" type="button" value="tan" onclick="tan()" >
-<input style="height:20px;width:30px" type="button" value="ln" onclick="log()" >
+            <input style="height:20px;width:32px" type="button" value="sin" onclick="szin()" >
+            <input style="height:20px;width:32px" type="button" value="cos" onclick="kosz()" >
+            <input style="height:20px;width:32px" type="button" value="tan" onclick="tan()" >
+            <input style="height:20px;width:30px" type="button" value="ln" onclick="log()" >
 
 
-</form>
-<span id="eredmeny" class="eredmeny"> </span><br>
-<span id="eredmeny2" class="eredmeny2"> </span>
-<script src="js/feladatok.js"></script>
-</td></tr>
-</table>
+        </form>
+                <span id="eredmeny" class="eredmeny"> </span><br>
+                <span id="eredmeny2" class="eredmeny2"> </span>
+                <script src="js/js/feladatok.js"></script>
+            </td>
+<td>
+    <form>
+
+        <input style="height:20px;width:209px" type="text" id="num1m">
+        <label style="height:20px;width:209px; display:block" id="labelm">művelet</label>
+        <input style="height:20px;width:209px" type="text" id="num2m">
+        <label style="height:20px;width:209px; display:block" id="label2m">eredmény</label>
+        <input style="height:20px;width:50px" type="button" value="1" onclick="egym()">
+        <input style="height:20px;width:50px" type="button" value="2" onclick="ketm()">
+        <input style="height:20px;width:50px" type="button" value="3" onclick="harm()">
+        <input style="height:20px;width:50px" type="button" value="4" onclick="negym()"><br>
+        <input style="height:20px;width:50px" type="button" value="5" onclick="otm()">
+        <input style="height:20px;width:50px" type="button" value="6" onclick="hatm()">
+        <input style="height:20px;width:50px" type="button" value="7" onclick="hetm()">
+        <input style="height:20px;width:50px" type="button" value="8" onclick="nyolcm()"><br>
+        <input style="height:20px;width:50px" type="button" value="9" onclick="kilm()">
+        <input style="height:20px;width:50px" type="button" value="0" onclick="nulm()">
+        <input style="height:20px;width:50px" type="button" value="+" onclick="pluszm()">
+        <input style="height:20px;width:50px" type="button" value="-" onclick="kivonm()"><br>
+        <input style="height:20px;width:50px" type="button" value="." onclick="tizpontm()">
+        <input style="height:20px;width:50px" type="button" value="*" onclick="szorm()">
+        <input style="height:20px;width:50px" type="button" value="/" onclick="osztm()">
+        <input style="height:20px;width:50px" type="button" value="^" onclick="hatvanym()">
+        <br>
+
+        <input style="height:20px;width:104px" type="button" value="=" onclick="megoldasm()">
+        <input style="height:20px;width:104px" type="button" value="C" onclick="torlesm()">
+
+    </form>
+    <script src="js/szamologepMoni2.0.js"></script>
+    <!--Móni 2.0-->
+</td>
+        </tr>
+
+    </table>
+    </table>
+<script src="/js/js/gaborszamologep3.0.js">
+
+</script>
+<script src="js/js/feladatok.js"></script>
+<script src="js/szamologepMoni2.0.js"></script>
+<script src="/js/danicalculator2.js"></script>
 </body>
 
 </html>
